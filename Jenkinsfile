@@ -86,7 +86,10 @@ pipeline{
                 }]
             }'''
             server.upload(uploadSpec) 
+                }
+            }
         }
+                
         stage('Docker Image Build'){
          when { expression {  params.action == 'create' } }
             steps{
