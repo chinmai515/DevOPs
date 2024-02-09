@@ -77,7 +77,7 @@ pipeline{
             when { expression { params.action == 'create' } }
             steps{
                 script{
-                    def server = Artifactory.server '<Pushartifact>'
+                    def server = Artifactory.server 'Pushartifact'
                     def uploadSpec = '''{
                     "files": [{
                     "pattern": "<kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar>",
